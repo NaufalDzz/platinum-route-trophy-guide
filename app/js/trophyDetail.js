@@ -33,7 +33,7 @@ function disputesHtml(t, guide) {
   return (t.disputes ?? [])
     .map(
       (d) => `<div class="differ-box">
-      <h4>⇄ Sources differ — ${escapeHtml(d.topic)}</h4>
+      <h4>⇄ Sources differ — ${escapeHtml(d.topic)}${d.unconfirmed ? ' <span class="unconfirmed-tag">Unconfirmed</span>' : ''}</h4>
       <div class="differ-side"><span class="differ-tag">A</span><p>${escapeHtml(d.a.t)} ${citeChips(d.a.c, guide)}</p></div>
       <div class="differ-side"><span class="differ-tag">B</span><p>${escapeHtml(d.b.t)} ${citeChips(d.b.c, guide)}</p></div>
       ${d.call ? `<p class="differ-call"><b>Our call:</b> ${escapeHtml(d.call)}</p>` : ''}

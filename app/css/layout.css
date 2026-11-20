@@ -212,3 +212,4 @@ body { min-height: 100vh; display: flex; flex-direction: column; }
   .tracker-grid { grid-template-columns: 1fr; }
   body { min-height: auto; }
 }
+.audit-chip b.amber-n { color: var(--risk); }

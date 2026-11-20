@@ -36,6 +36,7 @@ export function computeAudit(guide) {
     atRisk: trophies.filter((t) => t.risk === 'at-risk').length,
     disputes: trophies.reduce((n, t) => n + (t.disputes ?? []).length, 0),
     disputedTrophies: trophies.filter((t) => (t.disputes ?? []).length).length,
+    unconfirmed: trophies.reduce((n, t) => n + (t.disputes ?? []).filter((d) => d.unconfirmed).length, 0),
     online: trophies.filter((t) => t.online).length,
   };
 }
@@ -53,12 +54,10 @@ export function renderAuditStrip(el, a) {
     chip('ok', `${a.official}/${a.total}`, 'official'),
     chip('', gradeLine(a), `· ${a.hidden} hidden`),
     chip('ok', `${a.cited}/${a.claims}`, 'claims cited'),
-    chip('', `${a.multi}`, `on 2+ sources (${a.multiPct}%)`),
-    chip('ok', `${a.guidesCited}/${a.total}`, 'guides cited'),
+    chip('', `${a.multi}`, `2+ sources · ${a.multiPct}%`),
     chip('', a.pages, `pages · ${a.sites} sites`),
-    chip('red', a.missable, 'missable'),
-    chip('amber', a.atRisk, 'at risk'),
-    chip('violet', a.disputes, 'disputes'),
+    `<span class="audit-chip red"><b>${a.missable}</b>missable · <b class="amber-n">${a.atRisk}</b>at risk</span>`,
+    `<span class="audit-chip violet"><b>${a.disputes}</b>disputes · <b>${a.unconfirmed}</b>unconfirmed</span>`,
     chip('', a.online, 'online'),
   ].join('');
 }

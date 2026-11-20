@@ -50,7 +50,7 @@ export function renderSourcesView(el, app) {
       ${tile(String(audit.multi), `backed by 2+ sources · ${audit.multiPct}%`, 'indigo')}
       ${tile(`${audit.guidesCited}/${audit.total}`, 'guides fully cited', 'green')}
       ${tile(String(audit.pages), `pages read · ${audit.sites} sites`, 'indigo')}
-      ${tile(String(audit.disputes), 'source disputes shown', 'violet')}
+      ${tile(`${audit.disputes} · ${audit.unconfirmed}`, 'disputes shown · unconfirmed', 'violet')}
       ${tile(String(audit.online), 'online trophies', 'ink')}
     </div>
     <div class="sources-grid">

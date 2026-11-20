@@ -13,6 +13,9 @@
    "kind": "completion", "kindLabel": "Platinum", "chapter": "After everything", "roadmapStage": "s7", "order": 99, "risk": "safe",
    "guide": "The platinum pops once the other 54 are in. The whole list is single-player: no online trophies, no DLC, one playthrough and no difficulty setting, so the real cost is time — roughly 200 hours, most of it the 100% checklist after the credits.",
    "window": {"closes": "never", "t": "Nothing on the list needs a second run; only one trophy has a possibly-missable part, in Chapter 1.", "c": [1, 35, 79]},
+   "tips": [
+    {"t": "PowerPyx splits the run into three phases: the story with side content (60–80 h), the 100% list plus challenges (~100 h) and a short strand clean-up (~10 h).", "c": [1, 55]}
+   ],
    "steps": [
     {"t": "Play the story start to finish (about 60–80 hours) and grab the time-sensitive bits as they appear, above all Lucia's balcony meditation in Chapter 1.", "c": [1, 88, 79]},
     {"t": "Keep one manual save per chapter start and end: there are 15 manual slots plus 1 autosave, and no mission replay or chapter select.", "c": [1, 27, 85, 96]},
@@ -71,6 +74,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 2", "roadmapStage": "s2", "order": 19, "risk": "safe",
    "guide": "Finish Chapter 2 — about 11 main missions plus Billy's two optional jobs — ending with the move to Vice City. The partner system opens in this chapter, which unlocks a cluster of trophies.",
    "window": {"closes": "never", "t": "Story trophy; it cannot be missed.", "c": [1, 35]},
+   "tips": [
+    {"t": "Chapter 2 also opens Kingpin Bowling for Let's Go Bowling and Billy's mud races for Earn Cash, Not Kudos.", "c": [14, 9, 2]}
+   ],
    "steps": [
     {"t": "Chapter 2 opens with What's in the Bag? and closes with Checking Out, the move to Vice City.", "c": [83, 88, 26]},
     {"t": "Coffee Break mid-chapter lets you call your partner and swap between Jason and Lucia; several trophies need that.", "c": [1, 3, 79]},
@@ -87,6 +93,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 3", "roadmapStage": "s3", "order": 30, "risk": "safe",
    "guide": "The longest chapter (about 26 missions) ends with The Cartel Heist; the trophy follows once Chapter 4 opens. Do Yago's timed street race before you push on.",
    "window": {"closes": "never", "t": "Story trophy; it cannot be missed.", "c": [1, 35]},
+   "tips": [
+    {"t": "Yago's strand begins with Join a Street Race early in Chapter 3; it also opens the Hit 'N Run VC street races.", "c": [9, 42]}
+   ],
    "steps": [
     {"t": "Chapter 3 starts with Welcome to Vice City and ends with The Cartel Heist.", "c": [83, 94, 49]},
     {"t": "PowerPyx reports it popping after the first two Chapter 4 missions, Ocean Beach and Another Life.", "c": [1, 49]},
@@ -102,6 +111,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 4", "roadmapStage": "s4", "order": 42, "risk": "safe",
    "guide": "Clear Chapter 4 (about 25 missions, including the VCIA job). The chapter finale, Starting From Zero, triggers it. Pick up the optional vault mission that appears at the end of the chapter.",
    "window": {"closes": "never", "t": "Story trophy; it cannot be missed.", "c": [1, 50]},
+   "tips": [
+    {"t": "This is a Free Call From… (Lucia, Chapter 4) is time-sensitive optional content; no trophy depends on it.", "c": [2, 36]}
+   ],
    "steps": [
     {"t": "Chapter 4 opens with Ocean Beach and its run of jobs builds to the VCIA Takedown.", "c": [83, 88, 2]},
     {"t": "The trophy pops at the end of Starting From Zero, the chapter's last mission.", "c": [50, 1, 73]},
@@ -139,6 +151,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 2", "roadmapStage": "s2", "order": 14, "risk": "safe",
    "guide": "Unlocks for the Chapter 2 mission Breakfast Run, where Lucia checks on Jason. Straight after it, the game starts letting you switch characters.",
    "window": {"closes": "never", "t": "Main-story mission; it cannot be skipped.", "c": [1, 35]},
+   "tips": [
+    {"t": "Daily Driver, two missions earlier, unlocks the Vice City Real Estate app you need for Little Boxes.", "c": [1, 13, 35]}
+   ],
    "steps": [
     {"t": "Breakfast Run is the eighth main mission of Chapter 2, after Daily Driver and Slam Dunk.", "c": [83, 94, 2]},
     {"t": "Finish it and the trophy pops; nothing extra is needed during the mission.", "c": [1, 35]},
@@ -157,6 +172,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 3", "roadmapStage": "s3", "order": 29, "risk": "safe",
    "guide": "The Chapter 3 finale. A chain of setup jobs leads into The Cartel Heist; complete the heist itself for the trophy. How well you prepared changes the run, not the unlock.",
    "window": {"closes": "never", "t": "Main-story heist; heists cannot be replayed, but the trophy only needs a finish.", "c": [82, 49]},
+   "tips": [
+    {"t": "Rigging all three towers in Hidden Charges gives the longest finale clock (10:47 in one run).", "c": [82, 49]}
+   ],
    "steps": [
     {"t": "Work through the setups: Sinfrontera National Bank, Security Expert, Heist Planning, Company Property, Safe Word, The Missing Link and Hidden Charges.", "c": [82, 49, 2]},
     {"t": "The crates you keep in Company Property and the towers you rig in Hidden Charges decide how much time the finale gives you.", "c": [82]},
@@ -172,6 +190,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 4", "roadmapStage": "s4", "order": 36, "risk": "safe",
    "guide": "Story trophy for Child's Play in Chapter 4, the rescue of Rafa from his kidnappers. Lucia sneaks in while Jason buys time.",
    "window": {"closes": "never", "t": "Main-story mission; it cannot be missed.", "c": [46, 1]},
+   "tips": [
+    {"t": "Guides number Chapter 4 missions differently (OutputLag calls this mission 16, GameTrek #24), so follow mission names, not numbers.", "c": [46, 73]}
+   ],
    "steps": [
     {"t": "Child's Play arrives in the middle of Chapter 4, after Adventures in Babysitting, Rafa's Kidnapping and Fresh Evidence.", "c": [2, 83, 94]},
     {"t": "The rescue happens at a cement works south of the airport: Lucia infiltrates, Jason keeps the kidnappers talking.", "c": [46]},
@@ -187,6 +208,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 4", "roadmapStage": "s4", "order": 38, "risk": "safe",
    "guide": "Unlocked by Headliners, the Chapter 4 launch-party mission that closes Dre'Quan's storyline just before the airport job.",
    "window": {"closes": "never", "t": "Main-story mission; it cannot be missed.", "c": [47, 1]},
+   "tips": [
+    {"t": "Headliners is #18 of Chapter 4 on Dexerto and PC Gamer but #32 on GameTrek's longer list — go by the name.", "c": [83, 94, 73]}
+   ],
    "steps": [
     {"t": "Headliners follows Fully Catered and Heist Plans in Place late in Chapter 4.", "c": [2, 47]},
     {"t": "It wraps up Dre'Quan's thread and leads straight into the VCIA Takedown.", "c": [47, 83]},
@@ -217,6 +241,9 @@
    "kind": "story", "kindLabel": "Story", "chapter": "Chapter 5", "roadmapStage": "s5", "order": 48, "risk": "safe",
    "guide": "The fifth mission of the short Chapter 5. Finishing Operation Savage Glory gives the trophy and two story garages.",
    "window": {"closes": "never", "t": "Main-story mission; it cannot be missed.", "c": [51, 1]},
+   "tips": [
+    {"t": "No rush to explore first: the credits drop you back into free roam.", "c": [45, 39]}
+   ],
    "steps": [
     {"t": "Chapter 5 runs Bird in the Hand, Taking Liberties, Doggie Bag and VC Baby before Operation Savage Glory.", "c": [83, 94, 73]},
     {"t": "Complete Operation Savage Glory for the trophy.", "c": [51, 1]},
@@ -233,6 +260,9 @@
    "guide": "The hardest and longest trophy: a 35-line checklist that only becomes visible after the credits, though everything you did during the story already counts. Many lines need only part of a category, and nothing on it can be missed.",
    "counter": {"target": 35, "unit": "checklist lines"},
    "window": {"closes": "never", "t": "Nothing on the 100% checklist is missable; it opens under Progress > Stats > 100% Completion after the story.", "c": [12, 39, 57, 80]},
+   "tips": [
+    {"t": "19 of the 39 gang operations are marked for you during the story; the rest you hunt down.", "c": [25, 80]}
+   ],
    "steps": [
     {"t": "Finish the story first; the checklist page appears under Progress > Stats > 100% Completion and keeps all earlier progress.", "c": [12, 39, 80]},
     {"t": "All-or-nothing lines: 39 gang operations, 22 bank jobs, 8 vaults, 7 Payday Loans, 42 shooting-range golds, 42 drone trials, 15 target decks and 33 underwater discoveries.", "c": [57, 12, 25]},
@@ -242,7 +272,7 @@
     {"t": "Use the checklist screen as your to-do list; it shows exactly which lines are still short.", "c": [39, 25]}
    ],
    "disputes": [
-    {"topic": "narcotics target", "a": {"t": "The checklist line asks for $100,000 of narcotics fenced.", "c": [12]}, "b": {"t": "The same guide's flamingo section mentions a $200,000 narcotics requirement.", "c": [12]}, "call": "Unconfirmed; keep fencing until the line shows complete."}
+    {"topic": "narcotics target", "unconfirmed": true, "a": {"t": "The checklist line asks for $100,000 of narcotics fenced.", "c": [12]}, "b": {"t": "The same guide's flamingo section mentions a $200,000 narcotics requirement.", "c": [12]}, "call": "Unconfirmed; keep fencing until the line shows complete."}
    ]
   },
   {
@@ -271,6 +301,9 @@
    "kind": "activity", "kindLabel": "Activity", "chapter": "Ch 1 → any time", "roadmapStage": "s1", "order": 5, "risk": "safe",
    "guide": "Try each of the nine activity types once: fishing, hunting, golf, a shooting range, pool, basketball, a video game, a race and a stunt. Jason's house already has a hoop and a console for two of them.",
    "counter": {"target": 9, "unit": "activity types"},
+   "tips": [
+    {"t": "Cal's fishing challenge and Bret's first hunt tick fishing and hunting naturally.", "c": [29, 87, 16]}
+   ],
    "steps": [
     {"t": "The nine types are fishing, hunting, golf, a shooting-range challenge, pool, basketball, a video game, a race and a stunt.", "c": [1, 38, 87]},
     {"t": "Shoot one hoop and start a console game at Jason's house to tick two early.", "c": [38]},
@@ -334,7 +367,7 @@
     {"t": "Use Map > Activities > Racing to filter the blue race icons.", "c": [38, 42]}
    ],
    "disputes": [
-    {"topic": "do the street races count?", "a": {"t": "Hit 'N Run VC street races are listed among the 40 unique races.", "c": [9]}, "b": {"t": "Unconfirmed whether the street races count toward the 40.", "c": [42]}, "call": "Win circuit races first; treat street races as a bonus."}
+    {"topic": "do the street races count?", "unconfirmed": true, "a": {"t": "Hit 'N Run VC street races are listed among the 40 unique races.", "c": [9]}, "b": {"t": "Unconfirmed whether the street races count toward the 40.", "c": [42]}, "call": "Win circuit races first; treat street races as a bonus."}
    ]
   },
   {
@@ -366,6 +399,9 @@
    "kind": "activity", "kindLabel": "Activity", "chapter": "Ch 1 → any time", "roadmapStage": "s1", "order": 6, "risk": "at-risk",
    "guide": "Beat every level of any one of the four in-game video games: three on the home TV console and Bang For Your Buck on arcade cabinets. The home console vanishes for Chapter 2 and returns in Chapter 3, so the trophy is never truly lost.",
    "window": {"closes": "console gone in Ch 2", "t": "The home console is unavailable during Chapter 2 and back from Chapter 3; arcade cabinets remain an option.", "c": [17, 36, 12]},
+   "tips": [
+    {"t": "Tenebrae Lux also hides a phone code and a secret ending.", "c": [44, 17]}
+   ],
    "steps": [
     {"t": "Pick one game: Tenebrae Lux, Street Trash III or Time Jackers Rewind at home, or Bang For Your Buck on an arcade cabinet (one stands outside Bargain World in Port Gellhorn).", "c": [17, 1, 38, 86]},
     {"t": "Clear all of its levels; the side challenges inside the game are not needed.", "c": [1, 17]},
@@ -432,6 +468,9 @@
    "guide": "Finish eight stranger strands. Only some strands count, and at launch only four are confirmed: Kirk (the Skunk Ape hunter), Kyle, Yago and Pilot Pete. Check the trophy's counter before and after each strand's last quest. Yago's timed race in Chapter 3 is the one risk.",
    "counter": {"target": 8, "unit": "strands"},
    "window": {"closes": "Race Against Yago (Ch 3)", "t": "Race Against Yago carries an hourglass icon and can expire; do it as soon as it appears, from a fresh save.", "c": [42, 36, 56, 79]},
+   "tips": [
+    {"t": "Kirk's Skunk Ape hunt needs 3 of the 9 effigies hidden around the swamp.", "c": [92, 10]}
+   ],
    "steps": [
     {"t": "Confirmed counters: Kirk (night-only Skunk Ape quests, the last one Lucia only), Kyle (3 quests), Yago (4 quests) and Pilot Pete (5 quests, Jason only).", "c": [10, 59, 42]},
     {"t": "Kirk's Skunk Ape hunt starts from a poster at The Rusty Anchor in North Key Lento and can be done in Chapter 1.", "c": [92, 10]},
@@ -440,8 +479,8 @@
     {"t": "Stranger quests cannot be replayed, and some wait in-game weeks or chapters between steps; most stay open after the story.", "c": [1, 10, 27]}
    ],
    "disputes": [
-    {"topic": "which strands count?", "a": {"t": "Four strands are confirmed; the other four are still being identified.", "c": [10, 59]}, "b": {"t": "One count of all questlines lists 15 NPC strands in total.", "c": [59]}, "call": "Do every stranger strand you find and watch the counter."},
-    {"topic": "is the timed race required?", "a": {"t": "Race Against Yago is time-sensitive and Yago's strand counts.", "c": [42, 79]}, "b": {"t": "Whether missing the race stops Yago's strand from counting is unconfirmed.", "c": [36, 42]}, "call": "Do not test it — run the race when the hourglass appears."}
+    {"topic": "which strands count?", "unconfirmed": true, "a": {"t": "Four strands are confirmed; the other four are still being identified.", "c": [10, 59]}, "b": {"t": "One count of all questlines lists 15 NPC strands in total.", "c": [59]}, "call": "Do every stranger strand you find and watch the counter."},
+    {"topic": "is the timed race required?", "unconfirmed": true, "a": {"t": "Race Against Yago is time-sensitive and Yago's strand counts.", "c": [42, 79]}, "b": {"t": "Whether missing the race stops Yago's strand from counting is unconfirmed.", "c": [36, 42]}, "call": "Do not test it — run the race when the hourglass appears."}
    ]
   },
   {
@@ -501,7 +540,7 @@
     {"t": "Track progress under Progress > Collections > Exploration > Meditations; 100% only needs 15 of 18.", "c": [3, 37, 12]}
    ],
    "disputes": [
-    {"topic": "is the balcony session required?", "a": {"t": "Yes — skip it and the platinum is gone.", "c": [56, 58]}, "b": {"t": "It adds +1 to the counter, but no one has confirmed the trophy needs it; PowerPyx had done it when the trophy popped.", "c": [3, 37, 78, 1]}, "call": "Same fix either way: accept the balcony meditation before Chapter 1 ends."},
+    {"topic": "is the balcony session required?", "unconfirmed": true, "a": {"t": "Yes — skip it and the platinum is gone.", "c": [56, 58]}, "b": {"t": "It adds +1 to the counter, but no one has confirmed the trophy needs it; PowerPyx had done it when the trophy popped.", "c": [3, 37, 78, 1]}, "call": "Same fix either way: accept the balcony meditation before Chapter 1 ends."},
     {"topic": "how many spots?", "a": {"t": "18 meditations across 10 spots.", "c": [3, 37, 87]}, "b": {"t": "A map tool lists 10 spots.", "c": [81]}, "call": "Both are right: 10 places, 18 meditations once both characters count."}
    ]
   },
@@ -521,7 +560,7 @@
     {"t": "All 15 target decks are a 100% line, so finishing the decks also covers the trophy.", "c": [12, 57]}
    ],
    "disputes": [
-    {"topic": "what triggers it", "a": {"t": "Which unique animal unlocks it is still unconfirmed.", "c": [1]}, "b": {"t": "It unlocks on completing Bret's final mission.", "c": [59]}, "call": "Clear all 15 decks for 100% and it will come."}
+    {"topic": "what triggers it", "unconfirmed": true, "a": {"t": "Which unique animal unlocks it is still unconfirmed.", "c": [1]}, "b": {"t": "It unlocks on completing Bret's final mission.", "c": [59]}, "call": "Clear all 15 decks for 100% and it will come."}
    ]
   },
   {
@@ -549,6 +588,9 @@
    "kind": "collectible", "kindLabel": "Collectible", "chapter": "Any time", "roadmapStage": "s6", "order": 74, "risk": "safe",
    "guide": "Scan 100 WAiNK locations with the phone app — landmarks, curiosities, sculptures and tags. The phone vibrates and shows a prompt when you are near one on foot. 100 also covers the 100% line.",
    "counter": {"target": 100, "unit": "locations"},
+   "tips": [
+    {"t": "Hold D-pad up to open WAiNK; the scan prompt appears only on foot near the spot.", "c": [33, 5, 75]}
+   ],
    "steps": [
     {"t": "Open WAiNK (hold D-pad up) and hold R1 to scan a location when the on-screen notice appears.", "c": [33, 5]},
     {"t": "Categories include 31 Landmarks, 35 Curiosities and 23 Sculptures plus tags; any 100 count.", "c": [5, 75]},
@@ -568,6 +610,9 @@
    "kind": "activity", "kindLabel": "Activity", "chapter": "Any time", "roadmapStage": "s7", "order": 81, "risk": "safe",
    "guide": "Complete 50 of the 80 challenges (eight categories of ten, all open from the start). The 100% list asks for 70, so this pops along the way. Many complete during normal play.",
    "counter": {"target": 50, "unit": "challenges"},
+   "tips": [
+    {"t": "All 80 are open from the very start, so chip away at them in parallel with the story.", "c": [11, 34, 80]}
+   ],
    "steps": [
     {"t": "Open Progress > Challenges: 80 challenges in Combat, Criminal, Exploration, Fitness, Shopping, Sports, Survival and Vehicle.", "c": [11, 34, 80]},
     {"t": "Let normal play tick many off, then target the rest late in the game.", "c": [1, 35]},
@@ -582,6 +627,9 @@
    "hidden": false,
    "kind": "crime", "kindLabel": "Crime", "chapter": "Ch 2 → any time", "roadmapStage": "s2", "order": 15, "risk": "safe",
    "guide": "With your partner called in (possible from Coffee Break), get a 4-star wanted level and shake it off completely. It only pops after you leave the red heat zone. Vault robberies give 4 stars automatically, so it often comes for free.",
+   "tips": [
+    {"t": "To shake heat faster, change clothes, switch vehicles and stay away from CCTV.", "c": [54, 79]}
+   ],
    "steps": [
     {"t": "From Coffee Break in Chapter 2, call your partner so both are with you.", "c": [1, 79]},
     {"t": "Raise a 4-star wanted level, then escape on a fast sports bike or through the train tunnel north of Ambrosia in Kelly County.", "c": [1]},
@@ -614,6 +662,9 @@
    "kind": "collectible", "kindLabel": "Collectible", "chapter": "Any time", "roadmapStage": "s6", "order": 75, "risk": "safe",
    "guide": "Scanning a vehicle with the WAiNK app counts as discovering it — no driving needed. Stand by a busy road and scan traffic. The 100% list wants 200 base models, so start early.",
    "counter": {"target": 100, "unit": "vehicles"},
+   "tips": [
+    {"t": "The same WAiNK app studies animals with binoculars for the 100% animal line (100 of 255).", "c": [33, 12, 57]}
+   ],
    "steps": [
     {"t": "Open WAiNK and scan passing vehicles; each new model counts as discovered.", "c": [1, 33, 35]},
     {"t": "A busy junction gives a steady stream of new models.", "c": [1]},
@@ -632,6 +683,9 @@
    "hidden": false,
    "kind": "misc", "kindLabel": "Combat", "chapter": "Any time", "roadmapStage": "s6", "order": 60, "risk": "safe",
    "guide": "Combat Focus slows time while you aim (click both sticks) and drains a purple bar. Kill or down five hostiles before it runs out. Level Focus first, use an assault rifle and pick a group of gang guards.",
+   "tips": [
+    {"t": "Quick Focus farm: restart a beginner shooting-range challenge over and over.", "c": [32, 7]}
+   ],
    "steps": [
     {"t": "Activate Combat Focus by clicking L3+R3 while aiming; kills and incapacitations both count.", "c": [70, 79]},
     {"t": "Raise Focus to level 3–4 first — shooting ranges, golf, pool and fishing all train it.", "c": [1, 70, 7]},
@@ -718,6 +772,9 @@
     {"t": "Easy route: complete That's Where The Money Is… or any large-bank vault job, which counts.", "c": [1, 15, 79]},
     {"t": "Early route: block an armoured truck near a Vice City bank and blow the rear door with a sticky bomb (sold by Yasmani after his jobs).", "c": [1]},
     {"t": "It only unlocks once you leave the red heat zone (a Pay 'n' Spray also clears it).", "c": [35, 79]}
+   ],
+   "disputes": [
+    {"topic": "where to buy sticky bombs", "a": {"t": "From Yasmani's shop once his jobs are done.", "c": [1]}, "b": {"t": "Ammu-Nation stocks them after Credit Check.", "c": [90, 30]}, "call": "Both appear to sell them; use whichever is closer."}
    ]
   },
   {
@@ -752,7 +809,7 @@
    ],
    "disputes": [
     {"topic": "do operations come back?", "a": {"t": "Operations respawn after a cooldown.", "c": [1, 18]}, "b": {"t": "Cleared operations do not respawn.", "c": [60]}, "call": "Loot everything on the first visit."},
-    {"topic": "is 'Other Criminals' a gang?", "a": {"t": "Listed as one of 9 groups.", "c": [18]}, "b": {"t": "Unclear whether it counts for the trophy.", "c": [1]}, "call": "Rob at least one from each of the nine headings."}
+    {"topic": "is 'Other Criminals' a gang?", "unconfirmed": true, "a": {"t": "Listed as one of 9 groups.", "c": [18]}, "b": {"t": "Unclear whether it counts for the trophy.", "c": [1]}, "call": "Rob at least one from each of the nine headings."}
    ]
   },
   {
@@ -769,7 +826,7 @@
     {"t": "Two other trophy lists still called the trigger unconfirmed at launch, so treat this method as the best current lead.", "c": [35, 79]}
    ],
    "disputes": [
-    {"topic": "confirmed trigger?", "a": {"t": "PowerPyx gives the rooftop-bar Apple Martini method.", "c": [1]}, "b": {"t": "Other lists had no confirmed method at launch.", "c": [35, 79]}, "call": "Use the PowerPyx method; it is the only specific one."}
+    {"topic": "confirmed trigger?", "unconfirmed": true, "a": {"t": "PowerPyx gives the rooftop-bar Apple Martini method.", "c": [1]}, "b": {"t": "Other lists had no confirmed method at launch.", "c": [35, 79]}, "call": "Use the PowerPyx method; it is the only specific one."}
    ]
   },
   {
@@ -786,7 +843,7 @@
     {"t": "Drive it straight through the showroom window; the trophy follows after a short delay.", "c": [1]}
    ],
    "disputes": [
-    {"topic": "confirmed trigger?", "a": {"t": "The blue Banshee through the south Vice City showroom window.", "c": [1]}, "b": {"t": "No confirmed method on other lists at launch.", "c": [35, 79]}, "call": "Use the Banshee method."}
+    {"topic": "confirmed trigger?", "unconfirmed": true, "a": {"t": "The blue Banshee through the south Vice City showroom window.", "c": [1]}, "b": {"t": "No confirmed method on other lists at launch.", "c": [35, 79]}, "call": "Use the Banshee method."}
    ]
   },
   {
@@ -821,7 +878,7 @@
     {"t": "Check both characters under Touchpad > Jason & Lucia > Strength.", "c": [1, 69]}
    ],
    "disputes": [
-    {"topic": "what triggers it", "a": {"t": "Maximum Strength on both characters.", "c": [1, 55, 35, 32]}, "b": {"t": "It pops when your character gets fat.", "c": [69]}, "call": "Most sources say max Strength; try that first."}
+    {"topic": "what triggers it", "unconfirmed": true, "a": {"t": "Maximum Strength on both characters.", "c": [1, 55, 35, 32]}, "b": {"t": "It pops when your character gets fat.", "c": [69]}, "call": "Most sources say max Strength; try that first."}
    ]
   },
   {
@@ -848,6 +905,9 @@
    "hidden": true,
    "kind": "crime", "kindLabel": "Crime", "chapter": "Ch 3 → any time", "roadmapStage": "s3", "order": 21, "risk": "safe",
    "guide": "Go back to the Payday Loans in Little Cuba robbed in the Prologue and rob it again as Lucia, alone, escaping on foot. Possible once Credit Check in Chapter 3 gives you Payday Loans and the Dye Pack Jammer.",
+   "tips": [
+    {"t": "Payday Loans are one of the all-or-nothing 100% robbery lines, so fold this into a Payday Loans sweep.", "c": [12, 57, 80]}
+   ],
    "steps": [
     {"t": "Finish Credit Check in Chapter 3 to unlock Payday Loans and the Dye Pack Jammer.", "c": [1, 30, 41]},
     {"t": "As Lucia, without your partner, go to the Payday Loans in Little Cuba from the Prologue.", "c": [1]},
@@ -855,7 +915,7 @@
     {"t": "The unlock is slightly delayed.", "c": [1]}
    ],
    "disputes": [
-    {"topic": "confirmed trigger?", "a": {"t": "Rob the Prologue Payday Loans again, solo as Lucia, escaping on foot.", "c": [1]}, "b": {"t": "No confirmed method on other lists at launch.", "c": [35, 79]}, "call": "Follow the solo-Lucia method."}
+    {"topic": "confirmed trigger?", "unconfirmed": true, "a": {"t": "Rob the Prologue Payday Loans again, solo as Lucia, escaping on foot.", "c": [1]}, "b": {"t": "No confirmed method on other lists at launch.", "c": [35, 79]}, "call": "Follow the solo-Lucia method."}
    ]
   },
   {
@@ -891,7 +951,7 @@
     {"t": "Kick ten pedestrians within 60 seconds.", "c": [1]}
    ],
    "disputes": [
-    {"topic": "confirmed trigger?", "a": {"t": "Kick 10 pedestrians from a bike within 60 seconds.", "c": [1]}, "b": {"t": "No confirmed method on other lists at launch.", "c": [35, 79]}, "call": "Use the bike-kick method."}
+    {"topic": "confirmed trigger?", "unconfirmed": true, "a": {"t": "Kick 10 pedestrians from a bike within 60 seconds.", "c": [1]}, "b": {"t": "No confirmed method on other lists at launch.", "c": [35, 79]}, "call": "Use the bike-kick method."}
    ]
   },
   {
@@ -948,6 +1008,9 @@
    "kind": "misc", "kindLabel": "Vehicles", "chapter": "Ch 2 → any time", "roadmapStage": "s2", "order": 12, "risk": "safe",
    "guide": "The Scooter Bros app arrives with the Chapter 2 mission Moses. Take a stolen car to Moses' garage in Port Gellhorn, choose Respray then Register, and repeat ten times. Each registered car needs a garage space, so buy garages alongside.",
    "counter": {"target": 10, "unit": "vehicles"},
+   "tips": [
+    {"t": "The app's premium tier costs $12,500 according to GamerFuzion.", "c": [31]}
+   ],
    "steps": [
     {"t": "Finish Moses (take a vehicle to Moses) in Chapter 2 to get the Scooter Bros app.", "c": [1, 31, 62]},
     {"t": "Drive a stolen car to Moses' garage in Port Gellhorn and pick Respray, then Register.", "c": [1, 62, 35]},
