@@ -1,5 +1,6 @@
 [
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
+  { "file": "1-cover.jpg", "path": "/?shot=cover", "view": "Tracker with Spoiler Shield on, filters, audit strip and a cited guide open", "viewport": { "width": 1280, "height": 800 }, "scale": 1 },
+  { "file": "2-roadmap.jpg", "path": "/?shot=roadmap", "view": "Platinum Roadmap: cited headline tiles and ordered stages", "viewport": { "width": 1280, "height": 800 }, "scale": 1 },
+  { "file": "3-missables.jpg", "path": "/?shot=missables", "view": "Missables and the chapter timeline with Point of No Return flags", "viewport": { "width": 1280, "height": 800 }, "scale": 1 },
+  { "file": "4-sources-audit.jpg", "path": "/?shot=sources", "view": "Sources, computed audit and the Export/Import backup panel", "viewport": { "width": 1280, "height": 800 }, "scale": 1 }
 ]
