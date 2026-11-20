@@ -3,7 +3,7 @@
  "officialCite": [24, 35, 77],
  "kpis": [
   {"label": "hours to platinum", "value": "~200", "tone": "indigo", "c": [1, 55, 35, 79]},
-  {"label": "difficulty (GameTrek: 7)", "value": "4/10", "tone": "ink", "c": [1, 78, 54]},
+  {"label": "difficulty (PowerPyx)", "value": "4/10", "tone": "ink", "c": [1, 78]},
   {"label": "playthrough", "value": "1", "tone": "green", "c": [1, 55, 35]},
   {"label": "possibly missable", "computed": "missable", "tone": "red", "c": [1, 36, 79]},
   {"label": "at-risk windows", "computed": "atRisk", "tone": "amber", "c": [36, 42, 16]},
@@ -14,7 +14,7 @@
    "id": "s1", "n": 1, "tone": "red", "title": "Key Lento start", "short": "Ch 1 · Key Lento",
    "chapters": "Prologue + Chapter 1 · ~22 missions",
    "stop": {"t": "Do Lucia's balcony meditation before Tourist Trap — it is gone when Chapter 1 ends.", "c": [3, 36, 37]},
-   "counts": [{"value": "1/18", "label": "meditation"}, {"value": "1", "label": "Cal fish"}, {"value": "7", "label": "Kenton wrecks"}],
+   "counts": [{"value": "1", "label": "balcony meditation"}, {"value": "1", "label": "Cal fish"}, {"value": "7", "label": "Kenton wrecks"}],
    "steps": [
     {"t": "Play the story; save in a spare slot before Tourist Trap.", "c": [36, 27]},
     {"t": "Beat Cal's fishing challenge while Jason still has his boat.", "c": [16, 29]},

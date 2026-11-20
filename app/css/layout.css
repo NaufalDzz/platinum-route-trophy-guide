@@ -180,7 +180,7 @@ body { min-height: 100vh; display: flex; flex-direction: column; }
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: minmax(260px, 310px) minmax(0, 1fr) minmax(220px, 270px);
+  grid-template-columns: minmax(250px, 296px) minmax(0, 1fr) minmax(210px, 250px);
   gap: 14px;
   padding: 12px 20px 14px;
 }

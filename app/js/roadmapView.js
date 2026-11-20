@@ -42,6 +42,21 @@ function stageCard(stage, guide, store) {
   </article>`;
 }
 
+/** The whole route on one line: every stage in play order with its progress and any missable stop. */
+function routeStrip(guide, store) {
+  return `<ol class="rm-route" aria-label="Route overview">${guide.roadmap.stages
+    .map((stage) => {
+      const all = guide.trophies.filter((t) => t.roadmapStage === stage.id);
+      const done = all.filter((t) => store.isEarned(t.id)).length;
+      return `<li class="rm-route-step tone-${stage.tone ?? 'indigo'}">
+        <span class="rm-route-n">${stage.n}</span>
+        <span class="rm-route-text"><b>${escapeHtml(stage.title)}</b><small>${done}/${all.length} trophies</small></span>
+        ${stage.stop ? '<span class="rm-route-stop">⛔ STOP</span>' : ''}
+      </li>`;
+    })
+    .join('')}</ol>`;
+}
+
 /** Render the roadmap into its section. */
 export function renderRoadmapView(el, app) {
   const { guide, store } = app;
@@ -54,6 +69,7 @@ export function renderRoadmapView(el, app) {
       <button type="button" class="btn btn-light print-btn" data-print>Print roadmap</button>
     </header>
     <div class="kpi-row">${r.kpis.map((k) => kpiTile(k, guide, app.audit)).join('')}</div>
+    ${routeStrip(guide, store)}
     <div class="rm-grid">${r.stages.map((s) => stageCard(s, guide, store)).join('')}</div>
   </div>`;
   el.querySelectorAll('[data-pick]').forEach((b) =>

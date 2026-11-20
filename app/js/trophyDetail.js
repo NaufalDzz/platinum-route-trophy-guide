@@ -88,12 +88,13 @@ export function renderTrophyDetail(el, t, guide, store, handlers) {
     </div>
     <div class="pill-row">${pills}</div>
     <p class="guide-summary">${escapeHtml(t.guide)}</p>
-    <div class="detail-body${t.window || t.counter || (t.disputes ?? []).length ? ' has-side' : ''}">
+    ${counterHtml(t, store)}
+    <div class="detail-body${t.window || (t.disputes ?? []).length ? ' has-side' : ''}">
       <div class="detail-main">
         ${stepsHtml(t, guide)}
         ${(t.tips ?? []).length ? `<div class="tips"><h4>Tips</h4><ul>${t.tips.map((s) => `<li>${escapeHtml(s.t)} ${citeChips(s.c, guide)}</li>`).join('')}</ul></div>` : ''}
       </div>
-      <div class="detail-side">${counterHtml(t, store)}${windowHtml(t, guide)}${disputesHtml(t, guide)}</div>
+      <div class="detail-side">${windowHtml(t, guide)}${disputesHtml(t, guide)}</div>
     </div>`;
 
   el.querySelector('[data-earn]').addEventListener('click', () => handlers.toggle(t.id));
