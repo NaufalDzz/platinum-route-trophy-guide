@@ -17,7 +17,7 @@ export function citeChips(ids, guide) {
 }
 
 /**
- * Every cited claim in the guide: trophy steps, tips, missable windows and dispute sides, plus roadmap
+ * Every cited claim in the guide: each trophy's official text, steps, tips, missable windows and dispute sides, plus roadmap
  * statements. Each item is { where, text, cites, trophyId }.
  */
 export function collectClaims(guide) {
@@ -26,6 +26,7 @@ export function collectClaims(guide) {
     if (item && item.t) claims.push({ where, text: item.t, cites: item.c ?? [], trophyId });
   };
   for (const t of guide.trophies) {
+    add('official', { t: `${t.name}: ${t.description} (${t.grade})`, c: guide.roadmap.officialCite }, t.id);
     (t.steps ?? []).forEach((s) => add('step', s, t.id));
     (t.tips ?? []).forEach((s) => add('tip', s, t.id));
     if (t.window) add('window', t.window, t.id);

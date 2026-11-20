@@ -33,6 +33,18 @@ function importPanel(app) {
   </section>`;
 }
 
+/** Pages read and claims backed per site, most-cited site first. */
+function siteSummary(guide, usage) {
+  const bySite = new Map();
+  for (const s of guide.sources) {
+    const row = bySite.get(s.site) ?? { site: s.site, pages: 0, claims: 0 };
+    row.pages += 1;
+    row.claims += usage.get(s.id).claims;
+    bySite.set(s.site, row);
+  }
+  return [...bySite.values()].sort((a, b) => b.claims - a.claims);
+}
+
 /** Render the sources page. */
 export function renderSourcesView(el, app) {
   const { guide, audit } = app;
@@ -57,6 +69,9 @@ export function renderSourcesView(el, app) {
       ${importPanel(app)}
       <section class="source-table-wrap">
         <h3>Every page read · ${sites.length} sites</h3>
+        <div class="site-strip">${siteSummary(guide, usage)
+          .map((x) => `<span class="site-chip">${escapeHtml(x.site)} <small>${x.pages} pages · ${x.claims} claims</small></span>`)
+          .join('')}</div>
         <table class="source-table">
           <thead><tr><th>#</th><th>Site</th><th>Page read</th><th>Read</th><th>Claims</th><th>Guides</th></tr></thead>
           <tbody>${guide.sources

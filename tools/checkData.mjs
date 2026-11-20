@@ -114,7 +114,7 @@ function checkOffline() {
 function stats(trophies, roadmap) {
   const items = [];
   for (const t of trophies) {
-    items.push(...(t.steps ?? []), ...(t.tips ?? []));
+    items.push({ c: roadmap.officialCite }, ...(t.steps ?? []), ...(t.tips ?? []));
     if (t.window) items.push(t.window);
     for (const d of t.disputes ?? []) items.push(d.a, d.b);
   }

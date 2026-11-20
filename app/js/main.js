@@ -8,11 +8,13 @@ import { renderFilterChips, ONLINE_NOTE } from './filters.js';
 import { renderTrophyList, renderNextUp, visibleTrophies, GRADE_LETTER } from './trackerView.js';
 import { renderTrophyDetail, renderGuideSources } from './trophyDetail.js';
 import { revealOnce, countMasked } from './spoilerShield.js';
-import { downloadBackup, importBackupFile, describeImport } from './exportImport.js';
 import { readShot, shotSample } from './shotMode.js';
 
 const $ = (sel) => document.querySelector(sel);
 const VIEW_IDS = { tracker: 'tracker-view', roadmap: 'roadmap-view', missables: 'missables-view', sources: 'sources-view' };
+// Backup code is only needed when the reader exports or imports, so it loads on first use.
+const loadBackupTools = () => import('./exportImport.js');
+
 const LAZY_VIEWS = {
   roadmap: () => import('./roadmapView.js').then((m) => m.renderRoadmapView),
   missables: () => import('./missablesView.js').then((m) => m.renderMissablesView),
@@ -123,7 +125,8 @@ function wireControls() {
     const row = e.target.closest('[data-id]');
     if (row) store.setSetting('selected', Number(row.dataset.id));
   });
-  $('#export-btn').addEventListener('click', () => {
+  $('#export-btn').addEventListener('click', async () => {
+    const { downloadBackup } = await loadBackupTools();
     const backup = downloadBackup(store, app.guide);
     toast(`Exported ${backup.earned.length} earned and ${Object.keys(backup.counters).length} counters to a JSON file.`);
   });
@@ -131,6 +134,7 @@ function wireControls() {
   $('#import-file').addEventListener('change', async (e) => {
     const file = e.target.files[0];
     if (!file) return;
+    const { importBackupFile, describeImport } = await loadBackupTools();
     app.lastImport = await importBackupFile(file, store, app.guide);
     e.target.value = '';
     toast(describeImport(app.lastImport));

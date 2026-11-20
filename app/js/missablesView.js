@@ -22,11 +22,11 @@ function riskCard(t, guide, store) {
   const cls = t.risk === 'missable' ? 'risk-red' : 'risk-amber';
   const tag = t.risk === 'missable' ? 'MISSABLE' : 'AT RISK';
   const done = store.isEarned(t.id);
-  const count = t.counter ? `<span class="risk-count">${store.counter(t.id)}/${t.counter.target} ${escapeHtml(t.counter.unit)}</span>` : '';
+  const count = t.counter ? ` · <span class="risk-count">${store.counter(t.id)}/${t.counter.target} ${escapeHtml(t.counter.unit)}</span>` : '';
   return `<article class="risk-card ${cls}${done ? ' is-earned' : ''}">
     <header><span class="risk-tag">${tag}</span><span class="grade grade-${t.grade}">${GRADE_LETTER[t.grade]}</span>
-      <h3>${escapeHtml(masked ? maskedName(t) : t.name)}</h3>${done ? '<span class="risk-done">✓ earned</span>' : count}</header>
-    <p class="risk-closes">Window closes: <b>${escapeHtml(t.window?.closes ?? 'see guide')}</b></p>
+      <h3>${escapeHtml(masked ? maskedName(t) : t.name)}</h3>${done ? '<span class="risk-done">✓ earned</span>' : ''}</header>
+    <p class="risk-closes">Window closes: <b>${escapeHtml(t.window?.closes ?? 'see guide')}</b>${done ? '' : count}</p>
     <p class="risk-text">${escapeHtml(t.window?.t ?? '')} ${citeChips(t.window?.c, guide)}</p>
     <button type="button" class="risk-open" data-pick="${t.id}">Open guide →</button>
   </article>`;
