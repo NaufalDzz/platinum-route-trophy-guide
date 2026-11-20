@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Validates app/data/*.json: the 55 official names, descriptions and grades against the starter list, every guide
+// Validates app/reference/*.json: the 55 official names, descriptions and grades against the starter list, every guide
 // non-blank and cited, every citation resolving to a source, and the roadmap's references. Exits 1 on any problem.
 // Usage: node tools/checkData.mjs
 
@@ -96,7 +96,7 @@ function checkSources(sources, used) {
     if (seen.has(s.id)) fail(`duplicate source id ${s.id}`);
     seen.add(s.id);
     if (!/^https:\/\//.test(s.url)) fail(`source ${s.id}: url must be https`);
-    if (!s.site || !s.title || !s.read) fail(`source ${s.id}: site, title and read date required`);
+    if (!s.site || !s.title) fail(`source ${s.id}: site and title required`);
     if (!used.has(s.id)) fail(`source ${s.id} (${s.site}) is never cited`);
   }
 }
@@ -126,10 +126,22 @@ function stats(trophies, roadmap) {
   return { claims: items.length, multi, steps, stepMulti, disputes: trophies.reduce((n, t) => n + (t.disputes ?? []).length, 0) };
 }
 
-const data = readJson('app/data/trophies.json');
-const trophies = Array.isArray(data) ? data : data.trophies;
-const { sources } = readJson('app/data/sources.json');
-const roadmap = readJson('app/data/roadmap.json');
+const data = readJson('app/reference/trophies.json');
+// Records are rows in the order of the file's columns (null = none); steps, tips and dispute sides are [text, [source ids]] pairs.
+// Check them as the app reads them: objects, with { t, c } claims.
+const fromRows = (file, key) => file[key].map((row) => Object.fromEntries(file.columns.map((k, i) => [k, row[i]]).filter(([, v]) => v !== null)));
+const expandClaim = (item) => (Array.isArray(item) ? { t: item[0], c: item[1] } : item);
+const trophies = fromRows(data, 'trophies');
+for (const t of trophies) {
+  if (Array.isArray(t.steps)) t.steps = t.steps.map(expandClaim);
+  if (t.tips) t.tips = t.tips.map(expandClaim);
+  for (const d of t.disputes ?? []) Object.assign(d, { a: expandClaim(d.a), b: expandClaim(d.b) });
+}
+const sourceFile = readJson('app/reference/sources.json');
+const { readOn } = sourceFile;
+const sources = fromRows(sourceFile, 'sources');
+if (!/^\d{1,2} [A-Z][a-z]{2} \d{4}$/.test(readOn ?? '')) fail('sources.json: readOn date required');
+const roadmap = readJson('app/reference/roadmap.json');
 const sourceIds = new Set(sources.map((s) => s.id));
 const stageIds = new Set(roadmap.stages.map((s) => s.id));
 

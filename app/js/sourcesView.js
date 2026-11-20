@@ -1,8 +1,7 @@
 // Sources, Audit & Backup view: computed audit tiles, the Export/Import panel with its validation summary,
 // and the table of every page read with the number of claims it backs.
 
-import { escapeHtml, sourceUsage, collectClaims } from './citations.js';
-import { gradeLine } from './auditStrip.js';
+import { escapeHtml, sourceUsage, collectClaims, gradeLine } from './store.js';
 import { buildBackup, validateBackup, describeImport, downloadBackup } from './exportImport.js';
 
 function tile(value, label, tone = 'ink') {
@@ -79,7 +78,7 @@ export function renderSourcesView(el, app) {
               const u = usage.get(s.id);
               return `<tr><td class="num">${s.id}</td><td><span class="site-badge">${escapeHtml(s.site)}</span></td>
                 <td><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a><small>${escapeHtml(s.url.replace(/^https?:\/\/(www\.)?/, ''))}</small></td>
-                <td class="nowrap">${escapeHtml(s.read)}</td><td class="num">${u.claims}</td><td class="num">${u.guides.size}</td></tr>`;
+                <td class="nowrap">${escapeHtml(app.guide.readOn)}</td><td class="num">${u.claims}</td><td class="num">${u.guides.size}</td></tr>`;
             })
             .join('')}</tbody>
         </table>

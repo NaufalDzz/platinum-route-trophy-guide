@@ -1,14 +1,11 @@
 // Entry point: loads the data, wires the header, tabs, filters, search and keyboard, and renders the views.
 // The Roadmap, Missables and Sources views load on demand with import(), keeping the first load small.
 
-import { loadGuideData } from './dataLoader.js';
-import { createStore } from './store.js';
-import { computeAudit, renderAuditStrip } from './auditStrip.js';
+import { loadGuideData, createStore, computeAudit, gradeLine, readShot, shotSample } from './store.js';
 import { renderFilterChips, ONLINE_NOTE } from './filters.js';
 import { renderTrophyList, renderNextUp, visibleTrophies, GRADE_LETTER } from './trackerView.js';
 import { renderTrophyDetail, renderGuideSources } from './trophyDetail.js';
 import { revealOnce, countMasked } from './spoilerShield.js';
-import { readShot, shotSample } from './shotMode.js';
 
 const $ = (sel) => document.querySelector(sel);
 const VIEW_IDS = { tracker: 'tracker-view', roadmap: 'roadmap-view', missables: 'missables-view', sources: 'sources-view' };
@@ -29,6 +26,22 @@ function toast(message) {
   el.hidden = false;
   clearTimeout(toast.timer);
   toast.timer = setTimeout(() => (el.hidden = true), 4200);
+}
+
+/** The audit strip under the header: computed chips. */
+function renderAuditStrip(el, a) {
+  const chip = (cls, value, label) => `<span class="audit-chip ${cls}"><b>${value}</b>${label}</span>`;
+  el.innerHTML = [
+    '<span class="audit-label">AUDIT</span>',
+    chip('ok', `${a.official}/${a.total}`, 'official'),
+    chip('', gradeLine(a), `· ${a.hidden} hidden`),
+    chip('ok', `${a.cited}/${a.claims}`, 'claims cited'),
+    chip('', `${a.multi}`, `2+ sources · ${a.multiPct}%`),
+    chip('', a.pages, `pages · ${a.sites} sites`),
+    `<span class="audit-chip red"><b>${a.missable}</b>missable · <b class="amber-n">${a.atRisk}</b>at risk</span>`,
+    `<span class="audit-chip violet"><b>${a.disputes}</b>disputes · <b>${a.unconfirmed}</b>unconfirmed</span>`,
+    chip('', a.online, 'online'),
+  ].join('');
 }
 
 function renderHeaderProgress() {
@@ -77,7 +90,7 @@ function renderTracker() {
   renderNextUp($('#next-up'), guide, store, pick);
   renderGuideSources($('#guide-sources'), t, guide, store);
   const row = $(`#trophy-list [data-id="${store.setting('selected')}"]`);
-  if (row) row.scrollIntoView({ block: app.shot ? 'center' : 'nearest' });
+  if (row) row.scrollIntoView({ block: 'nearest' });
 }
 
 async function renderActiveView() {

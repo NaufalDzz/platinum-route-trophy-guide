@@ -16,7 +16,12 @@ function check(name, ok, detail = '') {
 }
 
 const official = JSON.parse(execFileSync('git', ['show', 'bf92d33:app/data/trophies.json'], { cwd: ROOT, encoding: 'utf8' })).trophies;
-const data = JSON.parse(readFileSync(join(ROOT, 'app/data/trophies.json'), 'utf8')).trophies;
+// The data file keeps one row per trophy in the order of its columns, steps as [text, [source ids]] pairs.
+const trophyFile = JSON.parse(readFileSync(join(ROOT, 'app/reference/trophies.json'), 'utf8'));
+const data = trophyFile.trophies.map((row) => {
+  const t = Object.fromEntries(trophyFile.columns.map((k, i) => [k, row[i]]));
+  return { ...t, steps: t.steps.map(([text, c]) => ({ t: text, c })) };
+});
 
 const server = await serveApp();
 const { browser, newPage, problems, blocked } = await openBrowser();

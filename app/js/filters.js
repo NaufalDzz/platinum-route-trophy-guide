@@ -1,4 +1,7 @@
-// Tracker filters: each has a label, a predicate and a live count computed from the data and saved progress.
+// Tracker filters and search: each filter has a label, a predicate and a live count computed from the data and saved
+// progress. Search matches masked trophies only on their masked label, so it never leaks spoilers.
+
+import { isMasked, maskedName } from './spoilerShield.js';
 
 export const FILTERS = [
   { id: 'all', label: 'All', test: () => true },
@@ -55,4 +58,29 @@ export function renderFilterChips(container, trophies, store, onPick) {
     container.append(chip);
   }
   return counts;
+}
+
+// ---------------------------------------------------------------- search
+
+function normalise(text) {
+  return String(text ?? '')
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[‘’]/g, "'")
+    .replace(/[^a-z0-9'*$ ]+/g, ' ');
+}
+
+/** The searchable text for one trophy, given what the reader is allowed to see. */
+export function searchableText(trophy, store) {
+  if (isMasked(trophy, store)) return normalise(`${maskedName(trophy)} ${trophy.kindLabel ?? ''}`);
+  const steps = (trophy.steps ?? []).map((s) => s.t).join(' ');
+  return normalise(`${trophy.name} ${trophy.description} ${trophy.guide} ${steps} ${trophy.chapter ?? ''} ${trophy.kindLabel ?? ''}`);
+}
+
+/** Whether every word of the query appears in the trophy's text. */
+export function matchesQuery(trophy, query, store) {
+  const words = normalise(query).split(' ').filter(Boolean);
+  if (!words.length) return true;
+  const haystack = searchableText(trophy, store);
+  return words.every((w) => haystack.includes(w));
 }

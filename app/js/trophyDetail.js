@@ -1,7 +1,7 @@
 // Trophy detail: official text, our guide, counter, missable window, numbered cited steps, Sources Differ boxes,
 // and the "Sources for this guide" panel.
 
-import { citeChips, escapeHtml, sourcesForTrophy } from './citations.js';
+import { citeChips, escapeHtml, sourcesForTrophy } from './store.js';
 import { isMasked, maskedName, maskedDescription } from './spoilerShield.js';
 import { GRADE_LETTER } from './trackerView.js';
 
@@ -118,7 +118,7 @@ export function renderGuideSources(el, t, guide, store) {
   el.innerHTML = `<h3 class="panel-title">Sources for this guide · ${ids.length}</h3><ul class="src-list">${ids
     .map((id) => {
       const s = guide.sourceById.get(id);
-      return `<li><span class="src-n">${id}</span><span><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a><small>${escapeHtml(s.site)} · read ${escapeHtml(s.read)}</small></span></li>`;
+      return `<li><span class="src-n">${id}</span><span><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a><small>${escapeHtml(s.site)} · read ${escapeHtml(guide.readOn)}</small></span></li>`;
     })
     .join('')}</ul>`;
 }

@@ -1,0 +1,28 @@
+{"coverTrophy":28,
+"officialCite":[24,35,77],
+"kpis":[
+{"label":"hours to platinum","value":"~200","tone":"indigo","c":[1,55,35,79]},
+{"label":"difficulty (PowerPyx)","value":"4/10","tone":"ink","c":[1,78]},
+{"label":"playthrough","value":"1","tone":"green","c":[1,55,35]},
+{"label":"possibly missable","computed":"missable","tone":"red","c":[1,36,79]},
+{"label":"at-risk windows","computed":"atRisk","tone":"amber","c":[36,42,16]},
+{"label":"online trophies","computed":"online","tone":"ink","c":[1,24,35]}
+],
+"stages":[
+{"id":"s1","n":1,"tone":"red","title":"Key Lento start","short":"Ch 1 · Key Lento","chapters":"Prologue + Chapter 1 · ~22 missions","stop":{"t":"Do Lucia's balcony meditation before Tourist Trap — it is gone when Chapter 1 ends.","c":[3,36,37]},"counts":[{"value":"1","label":"balcony meditation"},{"value":"1","label":"Cal fish"},{"value":"7","label":"Kenton wrecks"}],"steps":[{"t":"Play the story; save in a spare slot before Tourist Trap.","c":[36,27]},{"t":"Beat Cal's fishing challenge while Jason still has his boat.","c":[16,29]},{"t":"Start scanning vehicles and animals with WAiNK from day one.","c":[1,12,55]}]},
+{"id":"s2","n":2,"tone":"indigo","title":"Partner unlock","short":"Ch 2 · partner unlocks","chapters":"Chapter 2 · 11 missions + 2 optional","counts":[{"value":"8","label":"garages"},{"value":"10","label":"registrations"},{"value":"3","label":"bowling valuables"}],"steps":[{"t":"Coffee Break unlocks the partner: Hot Together and partner trophies open.","c":[1,79]},{"t":"Hit Kingpin Bowling and start Billy's and Bret's strands.","c":[14,1,29]},{"t":"Begin buying garages and registering cars through Moses.","c":[13,62]}]},
+{"id":"s3","n":3,"tone":"amber","title":"Vice City crime spree","short":"Ch 3 · Vice City","chapters":"Chapter 3 · ~26 missions","stop":{"t":"Race Against Yago is timed (hourglass) — run it the moment it appears.","c":[42,36,79]},"counts":[{"value":"8","label":"stranger strands"},{"value":"16","label":"Randy cars"},{"value":"3","label":"jewelry stores"}],"steps":[{"t":"Jewelry jobs: Sneakthief, then Retail Therapy across three stores.","c":[1,35]},{"t":"Key Cloner opens Randy's list and the showroom Banshee.","c":[1,31]},{"t":"Start Andy, Tyrone and the stranger strands as they ring.","c":[1,10,59]}]},
+{"id":"s4","n":4,"tone":"indigo","title":"Heists & vaults","short":"Ch 4 · heists","chapters":"Chapter 4 · ~25 missions","counts":[{"value":"5/8","label":"vaults"},{"value":"$250k","label":"marked bills"}],"steps":[{"t":"Take That's Where The Money Is… after the VCIA job: first vault.","c":[15,19]},{"t":"Vault escapes also give A Classic Blitz Play and Hot Together.","c":[1,15,35]}]},
+{"id":"s5","n":5,"tone":"ink","title":"Finale","short":"Ch 5 · finale","chapters":"Chapter 5 · ~7 missions","stop":{"t":"Save before the final mission; its choice decides the ending.","c":[27,45,56]},"steps":[{"t":"Credits return you to free roam before the finale.","c":[45,39]}]},
+{"id":"s6","n":6,"tone":"green","title":"Free-roam sweep","short":"Free roam · any time","chapters":"Any chapter · do alongside the story","counts":[{"value":"42","label":"range golds"},{"value":"14","label":"drone sites"},{"value":"100","label":"WAiNK"},{"value":"9","label":"gangs"}],"steps":[{"t":"Tank, jet, UFO, bike kicks and the rooftop cocktail are one-off stops.","c":[1,40,72]},{"t":"Shooting ranges and drone races also level Focus for Gunslinger.","c":[7,70]}]},
+{"id":"s7","n":7,"tone":"ink","title":"100% checklist","short":"Post-game · 100%","chapters":"After the credits · ~100+ hours","counts":[{"value":"35","label":"checklist lines"},{"value":"300","label":"stunts"},{"value":"70/80","label":"challenges"}],"steps":[{"t":"Open Progress > Stats > 100% Completion and clear each line.","c":[12,39,80]},{"t":"Stunts and challenges pop their trophies on the way.","c":[1,57]}]}
+],
+"chapters":[
+{"label":"Chapter 1","name":"~22 missions","note":"Key Lento · Jason's house","pnr":{"label":"Before Tourist Trap: balcony meditation","t":"Lucia's balcony meditation for Positive Mental Attitude is lost when Chapter 1 ends.","c":[36,3,37]}},
+{"label":"Chapter 2","name":"11 + 2 optional","note":"Coffee Break: partner unlocks"},
+{"label":"Chapter 3","name":"~26 missions","note":"Vice City opens","pnr":{"label":"Race Against Yago expires","t":"Yago's timed race can expire; his strand counts for Strangers & Freaks.","c":[42,36,79]}},
+{"label":"Chapter 4","name":"~25 missions","note":"VCIA job · vaults unlock"},
+{"label":"Chapter 5","name":"~7 missions","note":"Finale choice","pnr":{"label":"Final mission: save first","t":"The finale's choice sets the ending; keep a save before it.","c":[45,27,56]}},
+{"label":"After credits","name":"Free roam","note":"100% checklist opens"}
+],
+"safeNote":{"t":"Everything else stays open after the credits — the 100% checklist itself has nothing missable.","c":[12,39,57,79]}}

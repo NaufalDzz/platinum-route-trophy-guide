@@ -1,7 +1,7 @@
 // Platinum Roadmap view: cited headline tiles, then the ordered stages with their chapters, trophies,
 // collectible counts and red Missable Stop banners.
 
-import { citeChips, escapeHtml } from './citations.js';
+import { citeChips, escapeHtml } from './store.js';
 import { isMasked, maskedName } from './spoilerShield.js';
 import { GRADE_LETTER } from './trackerView.js';
 
@@ -11,7 +11,7 @@ function kpiValue(k, audit) {
 }
 
 function kpiTile(k, guide, audit) {
-  return `<div class="kpi kpi-${k.tone ?? 'ink'}">
+  return `<div class="kpi tone-${k.tone ?? 'ink'}">
     <span class="kpi-value">${escapeHtml(kpiValue(k, audit))}</span>
     <span class="kpi-label">${escapeHtml(k.label)}</span>
     <span class="kpi-cites">${citeChips(k.c, guide)}</span>

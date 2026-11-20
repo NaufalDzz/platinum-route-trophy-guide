@@ -1,10 +1,8 @@
 // Tracker view: the filtered checklist grouped by roadmap stage, plus the Next-Up panel.
 
-import { escapeHtml } from './citations.js';
-import { getFilter, ONLINE_NOTE } from './filters.js';
-import { matchesQuery } from './search.js';
+import { escapeHtml, sourcesForTrophy } from './store.js';
+import { getFilter, matchesQuery, ONLINE_NOTE } from './filters.js';
 import { isMasked, maskedName, maskedDescription } from './spoilerShield.js';
-import { sourcesForTrophy } from './citations.js';
 
 export const GRADE_LETTER = { platinum: 'P', gold: 'G', silver: 'S', bronze: 'B' };
 

@@ -1,7 +1,7 @@
 // Missables view: a chapter timeline with Point of No Return flags, then colour-coded risk cards
 // (Missable red, At-Risk amber, Safe green), all counted from the data.
 
-import { citeChips, escapeHtml } from './citations.js';
+import { citeChips, escapeHtml } from './store.js';
 import { isMasked, maskedName } from './spoilerShield.js';
 import { GRADE_LETTER } from './trackerView.js';
 
@@ -19,7 +19,7 @@ function timelineHtml(chapters, guide) {
 
 function riskCard(t, guide, store) {
   const masked = isMasked(t, store);
-  const cls = t.risk === 'missable' ? 'risk-red' : 'risk-amber';
+  const cls = t.risk === 'missable' ? 'tone-red' : 'tone-amber';
   const tag = t.risk === 'missable' ? 'MISSABLE' : 'AT RISK';
   const done = store.isEarned(t.id);
   const count = t.counter ? ` · <span class="risk-count">${store.counter(t.id)}/${t.counter.target} ${escapeHtml(t.counter.unit)}</span>` : '';
@@ -46,17 +46,17 @@ export function renderMissablesView(el, app) {
       <p class="page-sub">Every trophy rated from its official description and the cited guides · the timeline flags where a window shuts</p>
     </header>
     <div class="risk-tiles">
-      <div class="risk-tile t-red"><b>${missable.length}</b><span>Missable</span><small>one chance — do before the flag</small></div>
-      <div class="risk-tile t-amber"><b>${atRisk.length}</b><span>At risk</span><small>temporary window or unconfirmed</small></div>
-      <div class="risk-tile t-green"><b>${safe.length}</b><span>Safe</span><small>still open after the credits</small></div>
-      <div class="risk-tile t-ink"><b>${r.chapters.filter((c) => c.pnr).length}</b><span>PNR flags</span><small>on the chapter timeline</small></div>
+      <div class="risk-tile tone-red"><b>${missable.length}</b><span>Missable</span><small>one chance — do before the flag</small></div>
+      <div class="risk-tile tone-amber"><b>${atRisk.length}</b><span>At risk</span><small>temporary window or unconfirmed</small></div>
+      <div class="risk-tile tone-green"><b>${safe.length}</b><span>Safe</span><small>still open after the credits</small></div>
+      <div class="risk-tile tone-ink"><b>${r.chapters.filter((c) => c.pnr).length}</b><span>PNR flags</span><small>on the chapter timeline</small></div>
     </div>
     <h3 class="section-title">Chapter timeline</h3>
     ${timelineHtml(r.chapters, guide)}
     <div class="risk-grid">
       ${missable.map((t) => riskCard(t, guide, store)).join('')}
       ${atRisk.map((t) => riskCard(t, guide, store)).join('')}
-      <article class="risk-card risk-green">
+      <article class="risk-card tone-green">
         <header><span class="risk-tag">SAFE</span><h3>${safe.length} trophies never close</h3><span class="risk-done">${safeEarned}/${safe.length} earned</span></header>
         <p class="risk-text">${escapeHtml(r.safeNote?.t ?? '')} ${citeChips(r.safeNote?.c, guide)}</p>
         <div class="safe-chips">${safe
